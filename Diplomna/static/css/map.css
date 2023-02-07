@@ -1,0 +1,74 @@
+h1 {
+  font-size: 120%;
+  color: blue;
+  text-align: center;
+}
+.cont {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  height: 74%;
+  width: 64%;
+  background-color: #FFE5CC;
+}
+.rectangle {
+  margin: auto;
+  border: 3px outset blue;
+  background-color: #A4F4F8;
+  height: 18%;
+  width: 30%;
+  position: absolute;
+  left: 12%;
+  top: 20%;
+}
+#big_pool{
+  margin: auto;
+  margin-top: 5%;
+  font-style: italic;
+  text-align:center;
+}
+.circleBase {
+  border-radius: 50%;
+}
+.circle {
+  margin-left: 57%;
+  margin-top: 38%;
+  width: 19%;
+  height: 28%;
+  background: #A4F4F8;
+  border: 3px outset blue;
+}
+#kids_pool{
+  margin-top: 18%;
+  font-style: italic;
+  text-align:center;
+}
+.chair {
+  margin: 0 auto;
+  position:absolute;
+  height: 6%;
+  width: 3%;
+  text-align:center;
+}
+.free {
+  background-color: #80FF00;
+}
+.selected {
+  background-color: yellow;
+}
+.busy {
+  background-color: red;
+}
+.reserved {
+  background-color: orange;
+}
+.button {
+  position:absolute;
+  height: 12%;
+  width: 17%;
+  text-align:center;
+  font-size: 70%;
+  left: 81%;
+  top: 84%;
+  background-color: #33FF99;
+}

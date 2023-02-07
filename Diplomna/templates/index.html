@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-5, initial-scale=1"> 
+  <title>Pool time</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <h1>Swimming Complex</h1>
+  <div class="information">
+    <p>Добре дошли в страницата на комплекса ни. За Вашето удобство е добавено поле с атмосферните условия на територията на комплекса и интерактивна карта за резервации, с цел качествено обслужване. Насладете се на престоя си в сайта и след това Ви очакваме и на тереторията на комплекса.</p>
+  </div>
+  <div class="arduino">
+    <p> Температура на голям басейн: &nbsp;{{data['pool_temp1']}}°C<pre></pre>
+        Температура на детски басейн: &nbsp;{{data['pool_temp2']}}°C<pre></pre>
+        Температура на въздуха: &nbsp;{{data['air_temp']}}°C<pre></pre>
+        UV индекс: &nbsp;{{data['uv_index']}}<pre></pre>
+        Последна актуализация: &nbsp;{{data['date_time']}}</p>
+  </div>
+  <div class="container">
+    <a href="{{ url_for('map') }}"
+       class="btn left">
+      <span class="left icon icon-gear"></span>
+      <span class="right title"><span
+        class="arrow-right"></span>&nbsp;&nbsp;&nbsp;&nbsp;Интерактивна карта за резервации&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </a>
+  </div>
+</body>
+</html>

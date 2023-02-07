@@ -1,0 +1,67 @@
+<!DOCTYPE html><br>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+<h1>Можете да изберете и запазите места за днешния ден {{ current_date }} за най-късно след три часа {{ allowed_time }}, считано от текущия час - {{ current_time }}. </h1>
+</head>
+<img src="/static/css/legenda.jpg" </img>
+<body>
+  <div class="cont">
+  <div class="rectangle">
+    <p id="big_pool">Голям басейн<br>200&nbsp;кв.м,<br>дълбочина:&nbsp;1.40-2.20м.</p>
+  </div>
+  <div id="deck_chair">
+    <div class="chairs">
+        <form action="/map" method ="post" enctype="multipart/form-data">
+          <input type="submit" id="chair" name="code" value="{{chair[0]}}" class="chair {{ 'busy' if status[0] == 'busy'}} {{ 'reserved' if status[0] == 'reserved'}} {{ 'free' if status[0] == 'free'}} {{ 'selected' if temp_status[0]== 1 }}" style="left:9%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[1]}}"class="chair {{ 'busy' if status[1] == 'busy'}} {{ 'reserved' if status[1] == 'reserved'}} {{ 'free' if status[1] == 'free'}} {{ 'selected' if temp_status[1] == 1 }} " style="left:17%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[2]}}"class="chair {{ 'busy' if status[2] == 'busy'}} {{'reserved' if status[2] == 'reserved'}} {{ 'free' if status[2] == 'free'}} {{ 'selected' if temp_status[2]== 1 }} " style="left:25%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[3]}}"class="chair {{ 'busy' if status[3] == 'busy'}} {{'reserved' if status[3] == 'reserved'}} {{ 'free' if status[3] == 'free'}} {{ 'selected' if temp_status[3]== 1 }} " style="left:33%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[4]}}"class="chair {{ 'busy' if status[4] == 'busy'}} {{'reserved' if status[4] == 'reserved'}} {{ 'free' if status[4] == 'free'}} {{ 'selected' if temp_status[4]== 1 }}" style="left:41%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[5]}}"class="chair {{ 'busy' if status[5] == 'busy'}} {{'reserved' if status[5] == 'reserved'}} {{ 'free' if status[5] == 'free'}} {{ 'selected' if temp_status[5]== 1 }}" style="left:49%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[6]}}"class="chair {{ 'busy' if status[6] == 'busy'}} {{'reserved' if status[6] == 'reserved'}} {{ 'free' if status[6] == 'free'}} {{ 'selected' if temp_status[6]== 1 }}" style="left:57%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[7]}}"class="chair {{ 'busy' if status[7] == 'busy'}} {{'reserved' if status[7] == 'reserved'}} {{ 'free' if status[7] == 'free'}} {{ 'selected' if temp_status[7]== 1 }}" style="left:65%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[8]}}"class="chair {{ 'busy' if status[8] == 'busy'}} {{'reserved' if status[8] == 'reserved'}} {{ 'free' if status[8] == 'free'}} {{ 'selected' if temp_status[8]== 1 }}" style="left:73%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[9]}}"class="chair {{ 'busy' if status[9] == 'busy'}} {{'reserved' if status[9] == 'reserved'}} {{ 'free' if status[9] == 'free'}} {{ 'selected' if temp_status[9]== 1 }}" style="left:81%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[10]}}"class="chair {{ 'busy' if status[10] == 'busy'}} {{'reserved' if status[10] == 'reserved'}} {{ 'free' if status[10] == 'free'}} {{ 'selected' if temp_status[10]== 1 }} " style="left:89%; top:7%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[11]}}"class="chair {{ 'busy' if status[11] == 'busy'}} {{'reserved' if status[11] == 'reserved'}} {{ 'free' if status[11] == 'free'}} {{ 'selected' if temp_status[11]== 1 }} " style="left:49%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[12]}}"class="chair {{ 'busy' if status[12] == 'busy'}} {{'reserved' if status[12] == 'reserved'}} {{ 'free' if status[12] == 'free'}} {{ 'selected' if temp_status[12]== 1 }}" style="left:57%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[13]}}"class="chair {{ 'busy' if status[13] == 'busy'}} {{'reserved' if status[13] == 'reserved'}} {{ 'free' if status[13] == 'free'}} {{ 'selected' if temp_status[13]== 1 }}" style="left:65%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[14]}}"class="chair {{ 'busy' if status[14] == 'busy'}} {{'reserved' if status[14] == 'reserved'}} {{ 'free' if status[14] == 'free'}} {{ 'selected' if temp_status[14]== 1 }}" style="left:73%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[15]}}"class="chair {{ 'busy' if status[15] == 'busy'}} {{'reserved' if status[15] == 'reserved'}} {{ 'free' if status[15] == 'free'}} {{ 'selected' if temp_status[15]== 1 }}" style="left:81%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[16]}}" class="chair {{ 'busy' if status[16] == 'busy'}} {{ 'reserved' if status[16] == 'reserved'}} {{ 'free' if status[16] == 'free'}} {{ 'selected' if temp_status[16]== 1 }}" style="left:89%; top:27%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[17]}}" class="chair {{ 'busy' if status[17] == 'busy'}} {{ 'reserved' if status[17] == 'reserved'}} {{ 'free' if status[17] == 'free'}} {{ 'selected' if temp_status[17]== 1 }}" style="left:9%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[18]}}"class="chair {{ 'busy' if status[18] == 'busy'}} {{ 'reserved' if status[18] == 'reserved'}} {{ 'free' if status[18] == 'free'}} {{ 'selected' if temp_status[18]== 1 }}" style="left:17%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[19]}}"class="chair {{ 'busy' if status[19] == 'busy'}} {{'reserved' if status[19] == 'reserved'}} {{ 'free' if status[19] == 'free'}} {{ 'selected' if temp_status[19]== 1 }}" style="left:25%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[20]}}"class="chair {{ 'busy' if status[20] == 'busy'}} {{'reserved' if status[20] == 'reserved'}} {{ 'free' if status[20] == 'free'}} {{ 'selected' if temp_status[20]== 1 }}" style="left:33%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[21]}}"class="chair {{ 'busy' if status[21] == 'busy'}} {{'reserved' if status[21] == 'reserved'}} {{ 'free' if status[21] == 'free'}} {{ 'selected' if temp_status[21]== 1 }}" style="left:41%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[22]}}"class="chair {{ 'busy' if status[22] == 'busy'}} {{'reserved' if status[22] == 'reserved'}} {{ 'free' if status[22] == 'free'}} {{ 'selected' if temp_status[22]== 1 }}" style="left:49%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[23]}}"class="chair {{ 'busy' if status[23] == 'busy'}} {{'reserved' if status[23] == 'reserved'}} {{ 'free' if status[23] == 'free'}} {{ 'selected' if temp_status[23]== 1 }}" style="left:57%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[24]}}"class="chair {{ 'busy' if status[24] == 'busy'}} {{'reserved' if status[24] == 'reserved'}} {{ 'free' if status[24] == 'free'}} {{ 'selected' if temp_status[24]== 1 }}" style="left:65%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[25]}}"class="chair {{ 'busy' if status[25] == 'busy'}} {{'reserved' if status[25] == 'reserved'}} {{ 'free' if status[25] == 'free'}} {{ 'selected' if temp_status[25]== 1 }}" style="left:73%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[26]}}"class="chair {{ 'busy' if status[26] == 'busy'}} {{'reserved' if status[26] == 'reserved'}} {{ 'free' if status[26] == 'free'}} {{ 'selected' if temp_status[26]== 1 }}" style="left:81%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[27]}}" class="chair {{ 'busy' if status[27] == 'busy'}} {{ 'reserved' if status[27] == 'reserved'}} {{ 'free' if status[27] == 'free'}} {{ 'selected' if temp_status[27]== 1 }}" style="left:89%; top:47%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[28]}}" class="chair {{ 'busy' if status[28] == 'busy'}} {{ 'reserved' if status[28] == 'reserved'}} {{ 'free' if status[28] == 'free'}} {{ 'selected' if temp_status[28]== 1 }}" style="left:9%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[29]}}"class="chair {{ 'busy' if status[29] == 'busy'}} {{ 'reserved' if status[29] == 'reserved'}} {{ 'free' if status[29] == 'free'}} {{ 'selected' if temp_status[29]== 1 }}" style="left:17%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[30]}}"class="chair {{ 'busy' if status[30] == 'busy'}} {{'reserved' if status[30] == 'reserved'}} {{ 'free' if status[30] == 'free'}} {{ 'selected' if temp_status[30]== 1 }}" style="left:25%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[31]}}"class="chair {{ 'busy' if status[31] == 'busy'}} {{'reserved' if status[31] == 'reserved'}} {{ 'free' if status[31] == 'free'}} {{ 'selected' if temp_status[31]== 1 }}" style="left:33%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[32]}}"class="chair {{ 'busy' if status[32] == 'busy'}} {{'reserved' if status[32] == 'reserved'}} {{ 'free' if status[32] == 'free'}} {{ 'selected' if temp_status[32]== 1 }}" style="left:41%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[33]}}"class="chair {{ 'busy' if status[33] == 'busy'}} {{'reserved' if status[33] == 'reserved'}} {{ 'free' if status[33] == 'free'}} {{ 'selected' if temp_status[33]== 1 }}" style="left:49%; top:67%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[34]}}" class="chair {{ 'busy' if status[34] == 'busy'}} {{ 'reserved' if status[34] == 'reserved'}} {{ 'free' if status[34] == 'free'}} {{ 'selected' if temp_status[34]== 1 }}" style="left:9%; top:87%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[35]}}"class="chair {{ 'busy' if status[35] == 'busy'}} {{ 'reserved' if status[35] == 'reserved'}} {{ 'free' if status[35] == 'free'}} {{ 'selected' if temp_status[35]== 1 }}" style="left:17%; top:87%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[36]}}"class="chair {{ 'busy' if status[36] == 'busy'}} {{'reserved' if status[36] == 'reserved'}} {{ 'free' if status[36] == 'free'}} {{ 'selected' if temp_status[36]== 1 }}" style="left:25%; top:87%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[37]}}"class="chair {{ 'busy' if status[37] == 'busy'}} {{'reserved' if status[37] == 'reserved'}} {{ 'free' if status[37] == 'free'}} {{ 'selected' if temp_status[37]== 1 }}" style="left:33%; top:87%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[38]}}"class="chair {{ 'busy' if status[38] == 'busy'}} {{'reserved' if status[38] == 'reserved'}} {{ 'free' if status[38] == 'free'}} {{ 'selected' if temp_status[38]== 1 }}" style="left:41%; top:87%;"></input>
+          <input type="submit" id="chair" name="code" value="{{chair[39]}}"class="chair {{ 'busy' if status[39] == 'busy'}} {{'reserved' if status[39] == 'reserved'}} {{ 'free' if status[39] == 'free'}} {{ 'selected' if temp_status[39]== 1 }}" style="left:49%; top:87%;"></input>
+      </form>
+      </div>
+       <form action="/reserve" method ="post" enctype="multipart/form-data">
+        <input type="submit" name="reserved" id="reserved" value="Резервирай местата" class="button"></input>
+      </form>
+  </div>
+<div class="circleBase circle">
+  <p id="kids_pool" >Детски басейн<br>64&nbsp;кв.м<br>дълбочина:<br>0.8м.</p>
+</div>
+</body>
+</html> 

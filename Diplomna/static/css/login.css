@@ -1,0 +1,49 @@
+body{
+  background-color: #00CCCC;
+}
+h1{
+  color: yellow;
+  font-style: 80%;
+  text-align: center;
+  margin-top: 8%;
+}
+input[type=text]{
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+}
+input[type=password]{
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  position: absolute;
+  left: 35% ;
+  top: 40%;
+}
+.btn-default{
+  position: absolute;
+  left: 49%;
+  top: 50%;
+  width: 6%;
+  height: 3%;
+}
+.error{
+  color: #000099;
+  font-size: 100%;
+  position: absolute;
+  left: 27%;
+  top: 55%;
+}

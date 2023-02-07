@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reserve.css') }}">
+</head>
+<body>
+
+<h3>Формуляр за резервация</h3>
+
+<form action="/reserve" method="post">
+</form>
+
+<div class="container">
+<form action="/reserve" method="post">
+  {% if session['code'] %}
+    <p>Избраните места за резервация са шезлонгите:</p>
+    {% for chair in session['code'] %}
+    <p> {{chair}}
+    <a href="{{ url_for('delete_chair', code=chair) }}"class="RemoveAction"><img src="/static/css/icon-delete.jpg"alt="Remove Item" </img></a></p>
+    {% endfor %}
+    <br></br>
+    <label for="time">Изберете час за резервацията си от възможните:</label>
+      <select name="hour" id="cars">
+        {% for hour in available_hours %}
+          <option value= {{ hour }}>{{ hour }}</option>
+        {% endfor %}
+      </select>
+    <label for="fname">Първо име</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+    <label for="lname">Фамилно име</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="phone">Телефонен номер</label>
+    <input type="text" id="lname" name="phone" placeholder="Your phone number..">
+    <input type="submit" value="Резервирай">
+    {% endif %}
+  </form>
+    {% if error %}
+      <p class="error"><strong>{{ error }}</strong> </p>
+    {% endif %}
+</div>
+</body>
+</html>

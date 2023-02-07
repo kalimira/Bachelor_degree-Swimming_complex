@@ -1,0 +1,85 @@
+.reservation_list{
+  border: 2px solid #FFCC99;
+  font-size: 100%;
+  overflow-y: scroll;
+  height: 109px;
+  width: 19%;
+  background-color: #FFE5CC;
+}
+.cont {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  height: 74%;
+  width: 64%;
+  background-color: #FFE5CC;
+}
+.rectangle {
+  margin: auto;
+  border: 3px outset blue;
+  background-color: #A4F4F8;
+  height: 18%;
+  width: 30%;
+  position: absolute;
+  left: 12%;
+  top: 20%;
+}
+#big_pool{
+  margin: auto;
+  margin-top: 5%;
+  font-style: italic;
+  text-align:center;
+}
+.circleBase {
+  border-radius: 50%;
+}
+.circle {
+  margin-left: 57%;
+  margin-top: 38%;
+  width: 19%;
+  height: 28%;
+  background: #A4F4F8;
+  border: 3px outset blue;
+}
+.chair {
+  margin: auto;
+  position:absolute;
+  height: 6%;
+  width: 3%;
+  text-align:center;
+}
+#kids_pool{
+  margin-top: 18%;
+  font-style: italic;
+  text-align:center;
+}
+.free {
+  background-color: #80FF00;
+}
+.reserved {
+  background-color: orange;
+}
+.busy {
+  background-color: red;
+}
+.selected {
+  background-color: yellow;
+}
+.button_busy {
+  position:absolute;
+  height: 12%;
+  width: 17%;
+  text-align:center;
+  left: 81%;
+  top: 86%;
+  background-color: #33FF99;
+}
+.button_free {
+  position: absolute;
+  height: 12%;
+  width: 17%;
+  text-align: center;
+  left: 81%;
+  top: 74%;
+  background-color: #33FF99;
+}

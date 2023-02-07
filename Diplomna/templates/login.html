@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Admin login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Моля нека администраторът да влезе в профила си!</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn-default" type="submit" value="Влез">
+      </form>
+      {% if error %}
+      <p class="error"><strong>{{ error }}</strong> </p>
+      {% endif %}
+    </div>
+  </body>
+</html>

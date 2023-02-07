@@ -1,0 +1,89 @@
+h1{
+    font-size: 300%;
+    font-style: italic;
+    text-align: center;
+}
+body{
+    background-image: url('main.jpg');
+    background-size: cover;
+  }
+.information {
+  margin: auto;
+  border: 5px solid #0080FF;
+  background-color: #CCE5FF;
+  height: 15%;
+  width: 80%;
+  font-size: 120%;
+  font-style: italic;
+  text-align: center;
+}
+.arduino{
+  margin-left: 72%;
+  margin-top: 9%;
+  border: 5px solid #0080FF;
+  background-color: #CCE5FF;
+  height: 24%;
+  width: 25%;
+  font-size: 90%;
+  font-style: italic;
+  text-align: center;
+  }
+.container{
+  padding-top:80px; 
+  height:100%;
+  width:100%;
+}
+a{
+  text-decoration:none;
+  color:#fff;
+}
+.btn{
+  box-sizing:border-box;
+  display:inline-block;
+  overflow:hidden;
+  height:53px;
+  border-radius:6px;
+  line-height:30px;
+  font-size:16px; 
+  font-weight:bold;
+  text-shadow:0px 1px 1px #888;
+  position: absolute;
+  left: 2%;
+  top: 78%;
+}
+.btn span.icon,.btn span.title{
+  display:block;  
+  position:relative;
+  line-height:50px;
+  padding:0 30px;
+  border-radius:6px;
+}
+.btn span.left{
+  float:left;
+  border-radius:6px 0 0 6px;
+}
+.btn span.right{
+  float:right;
+  border-radius:0 6px 6px 0;
+}
+.btn span.title{
+  box-shadow:0 3px 0 0 #960F11;
+  background-color:#D92629;
+}
+.btn span.arrow-left,.btn span.arrow-right{
+  position:absolute;
+  width:0;
+  height:0;
+  border-top:25px solid transparent;
+  border-bottom:25px solid transparent;
+  transition:all .15s;
+  transition-property:left,right;
+}
+.btn.left span.arrow-right{
+  left:0;
+  box-shadow:-10px 0 0 0 #D92629,-10px 3px 0 0 #7E0A0C;
+  border-left:10px solid #FFFFFF;
+}
+.btn:hover span.arrow-right{
+  left:10px;
+}
